@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="#00FFFFFF"
+    android:gravity="center"
+    android:verticalScrollbarPosition="right"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="276dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center_vertical"
+        android:text="Discover"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="410dp"
+        android:layout_height="663dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="304dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/breakfastTitleTextView"
+                android:layout_width="123dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Breakfast"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="338dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/scramEggsImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/scrambled_eggs"
+                                android:onClick="ScrambledEggs"
+                                android:scaleType="fitXY"
+                                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/scramEggsTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Scrambled Eggs"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/friedEggsImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/fried_eggs"
+                                android:onClick="FriedEggs"
+                                android:scaleType="fitXY"
+                                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/friedEggsTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Fried Eggs"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dinnerTitleTextView"
+                android:layout_width="99dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Dinner"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="338dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/porkLoinImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/pork_loin"
+                                android:onClick="PorkLoin"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/porkLoinTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Pork Loin"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/porkChopsImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/pork_chops"
+                                android:onClick="PorkChops"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/porkChopsTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Pork Chops"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/spamBowlImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/spam_bowls"
+                                android:onClick="SpamBowl"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/spamBowlsTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Spam Bowl"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/spicyTunaImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/spicy_tuna_onigiri"
+                                android:onClick="SpicyTuna"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/spicyTunaTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Spicy Tuna Onigiri"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/macAndCheeseImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/mac_and_cheese"
+                                android:onClick="MacAndCheese"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/macAndCheeseTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Mac and Cheese"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dessertTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Dessert"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="338dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/chocolateCakeImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/chocolate_cake"
+                                android:onClick="ChocolateCake"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/chocolateCakeTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Chocolate Cake"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/strawberryCheesecakeImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/strawberry_cheesecake"
+                                android:onClick="StrawberryCheesecake"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/strawberryCheesecakeTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Strawberry Cheesecake"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/birthdayCakeImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/birthday_cake"
+                                android:onClick="BirthdayCake"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/birthdayCakeTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Birthday Cake"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/keyLimeImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/key_lime_pie"
+                                android:onClick="KeyLime"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/keyLimeTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Key Lime Pie"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="20dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <ImageButton
+                                android:id="@+id/applePieImageButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="235dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="@drawable/apple_pie"
+                                android:onClick="ApplePie"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/applePieTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="95dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Apple Pie"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
