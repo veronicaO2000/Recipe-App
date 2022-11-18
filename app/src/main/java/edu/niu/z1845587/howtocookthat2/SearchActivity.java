@@ -60,27 +60,82 @@ public class SearchActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch(position){
-                    case 0:
-                        //Toast.makeText(getApplicationContext(), (String)parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
-                        Intent scrambledEggs = new Intent(SearchActivity.this,RecipeActivity.class);
+                //Toast.makeText(getApplicationContext(), (String)parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+                Intent recipeIntent = new Intent(SearchActivity.this,RecipeActivity.class);
 
-                        scrambledEggs.putExtra(INTENTKEY_TITLETV, "Scrambled Eggs");
-                        scrambledEggs.putExtra("image", R.drawable.scrambled_eggs);
-                        scrambledEggs.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.scrambledEggs));
-
-                        startActivity(scrambledEggs);
-                        break;
-                    case 1:
-                        Intent friedEggs = new Intent(SearchActivity.this,RecipeActivity.class);
-
-                        friedEggs.putExtra(INTENTKEY_TITLETV, "Fried Eggs");
-                        friedEggs.putExtra("image", R.drawable.fried_eggs);
-                        friedEggs.putExtra(INTENTKEY_RECIPETV,getResources().getString(R.string.friedEggs));
-
-                        startActivity(friedEggs);
-                        break;
+                if((String)parent.getItemAtPosition(position) == "Scrambled Eggs") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Scrambled Eggs");
+                    recipeIntent.putExtra("image", R.drawable.scrambled_eggs);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.scrambledEggs));
                 }
+
+                if((String)parent.getItemAtPosition(position) == "Fried Eggs") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Fried Eggs");
+                    recipeIntent.putExtra("image", R.drawable.fried_eggs);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.friedEggs));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Pork Loin") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Pork Loin");
+                    recipeIntent.putExtra("image", R.drawable.pork_loin);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.porkLoin));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Pork Chops") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Pork Chops");
+                    recipeIntent.putExtra("image", R.drawable.pork_chops);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.porkChops));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Spam Bowl") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Spam Bowl");
+                    recipeIntent.putExtra("image", R.drawable.spam_bowls);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.spamBowl));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Spicy Tuna Onigiri") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Spicy Tuna Onigiri");
+                    recipeIntent.putExtra("image", R.drawable.spicy_tuna_onigiri);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.spicyTunaOnigiri));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Mac and Cheese") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Mac and Cheese");
+                    recipeIntent.putExtra("image", R.drawable.mac_and_cheese);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.mac));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Chocolate Cake") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Chocolate Cake");
+                    recipeIntent.putExtra("image", R.drawable.chocolate_cake);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.chocolate));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Strawberry Cheesecake") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Strawberry Cheesecake");
+                    recipeIntent.putExtra("image", R.drawable.strawberry_cheesecake);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.cheesecake));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Birthday Cake") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Birthday Cake");
+                    recipeIntent.putExtra("image", R.drawable.birthday_cake);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.birthday));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Key Lime Pie") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Key Lime Pie");
+                    recipeIntent.putExtra("image", R.drawable.key_lime_pie);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.key_lime));
+                }
+
+                if((String)parent.getItemAtPosition(position) == "Apple Pie") {
+                    recipeIntent.putExtra(INTENTKEY_TITLETV, "Apple Pie");
+                    recipeIntent.putExtra("image", R.drawable.apple_pie);
+                    recipeIntent.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.apple));
+                }
+
+                startActivity(recipeIntent);
             }
         });
     }
