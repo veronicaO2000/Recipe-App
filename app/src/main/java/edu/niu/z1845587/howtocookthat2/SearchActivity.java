@@ -1,10 +1,15 @@
 package edu.niu.z1845587.howtocookthat2;
 
+import static edu.niu.z1845587.howtocookthat2.MainActivity.INTENTKEY_RECIPETV;
+import static edu.niu.z1845587.howtocookthat2.MainActivity.INTENTKEY_TITLETV;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -51,6 +56,33 @@ public class SearchActivity extends AppCompatActivity {
         // Set adapter to ListView
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mylist);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        //Toast.makeText(getApplicationContext(), (String)parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+                        Intent scrambledEggs = new Intent(SearchActivity.this,RecipeActivity.class);
+
+                        scrambledEggs.putExtra(INTENTKEY_TITLETV, "Scrambled Eggs");
+                        scrambledEggs.putExtra("image", R.drawable.scrambled_eggs);
+                        scrambledEggs.putExtra(INTENTKEY_RECIPETV, getResources().getString(R.string.scrambledEggs));
+
+                        startActivity(scrambledEggs);
+                        break;
+                    case 1:
+                        Intent friedEggs = new Intent(SearchActivity.this,RecipeActivity.class);
+
+                        friedEggs.putExtra(INTENTKEY_TITLETV, "Fried Eggs");
+                        friedEggs.putExtra("image", R.drawable.fried_eggs);
+                        friedEggs.putExtra(INTENTKEY_RECIPETV,getResources().getString(R.string.friedEggs));
+
+                        startActivity(friedEggs);
+                        break;
+                }
+            }
+        });
     }
 
     @Override
