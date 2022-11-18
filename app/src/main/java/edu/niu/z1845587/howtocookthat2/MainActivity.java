@@ -2,16 +2,25 @@ package edu.niu.z1845587.howtocookthat2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public static final String INTENTKEY_TITLETV = "titleTextView";
     public static final String INTENTKEY_RECIPETV = "recipeTextView";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -161,4 +170,10 @@ public class MainActivity extends AppCompatActivity {
         //go to the recipe activity
         startActivity(recipeIntent);
     }
+
+    public void Search(View view) {
+        Intent searchIntent = new Intent(edu.niu.z1845587.howtocookthat2.MainActivity.this, SearchActivity.class);
+        startActivity(searchIntent);
+    }
+
 }

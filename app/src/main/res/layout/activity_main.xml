@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:backgroundTint="#00FFFFFF"
+    android:backgroundTint="#FFFFFFFF"
     android:gravity="center"
     android:verticalScrollbarPosition="right"
     tools:context=".MainActivity">
@@ -15,9 +15,9 @@
         android:id="@+id/textView"
         android:layout_width="276dp"
         android:layout_height="108dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_vertical"
+        android:paddingStart="10dp"
         android:text="Discover"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -28,9 +28,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="86dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        android:onClick="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <ScrollView
-        android:layout_width="410dp"
-        android:layout_height="663dp"
+        android:layout_width="402dp"
+        android:layout_height="718dp"
         android:scrollbarStyle="insideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +207,8 @@
                                 android:adjustViewBounds="true"
                                 android:foreground="@drawable/pork_loin"
                                 android:onClick="PorkLoin"
-                                android:scaleType="fitXY" />
+                                android:scaleType="fitXY"
+                                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                             <TextView
                                 android:id="@+id/porkLoinTextView"
@@ -225,7 +240,8 @@
                                 android:adjustViewBounds="true"
                                 android:foreground="@drawable/pork_chops"
                                 android:onClick="PorkChops"
-                                android:scaleType="fitXY" />
+                                android:scaleType="fitXY"
+                                tools:ignore="SpeakableTextPresentCheck" />
 
                             <TextView
                                 android:id="@+id/porkChopsTextView"
