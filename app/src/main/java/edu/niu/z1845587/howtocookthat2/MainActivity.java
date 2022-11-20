@@ -14,6 +14,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
 
 import java.util.ArrayList;
@@ -25,6 +26,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu with items using MenuInflater
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.search) {
+            Intent searchIntent = new Intent(edu.niu.z1845587.howtocookthat2.MainActivity.this, SearchActivity.class);
+            startActivity(searchIntent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void ScrambledEggs(View view) {
@@ -170,10 +196,4 @@ public class MainActivity extends AppCompatActivity {
         //go to the recipe activity
         startActivity(recipeIntent);
     }
-
-    public void Search(View view) {
-        Intent searchIntent = new Intent(edu.niu.z1845587.howtocookthat2.MainActivity.this, SearchActivity.class);
-        startActivity(searchIntent);
-    }
-
 }

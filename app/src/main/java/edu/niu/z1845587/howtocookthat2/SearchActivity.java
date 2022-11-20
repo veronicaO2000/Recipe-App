@@ -142,9 +142,8 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate menu with items using MenuInflator
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        // Inflate menu with items using MenuInflater
+        getMenuInflater().inflate(R.menu.menu, menu);
 
         // Initialise menu item search bar
         // with id and take its object
